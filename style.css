@@ -1,0 +1,144 @@
+body {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  overflow: hidden;
+}
+
+
+
+
+.calculator {
+  display: grid;
+  width: 400px;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px repeat(5, 1fr);
+
+
+  grid-template-areas:
+    'input  input input input '
+    'delete negative mod divide'
+    'seven  eight nine multiply'
+    'four   five  six minus'
+    'one    two three add'
+    'zero   zero comma equal';
+
+  column-gap: 10px;
+  row-gap: 5px;
+  padding: 10px;
+  align-items: center;
+  background-color: rgb(149, 218, 241);
+}
+
+input {
+  grid-area: input;
+  text-align: end;
+  font-size: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+.delete {
+  grid-area: delete;
+}
+
+.negative {
+  grid-area: negative;
+}
+
+.mod {
+  grid-area: mod;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.add {
+  grid-area: add;
+}
+
+.zero {
+  grid-area: zero;
+}
+
+.comma {
+  grid-area: comma;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.calculator button {
+  font-size: 50px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 150px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.calculator button:hover {
+  opacity: 0.7;
+}
+
+.calculator .operator {
+  background-color: rgb(248, 248, 131);
+  color: black;
+}
